@@ -1,0 +1,9 @@
+const mongoose=require('mongoose')
+const schema=mongoose.Schema
+const proSchema= new schema({
+    proId: { type: String, required: true },
+    proName: { type: String, required: true },
+    proPrice: { type: Number, required: true }
+});
+const proModel=mongoose.model("product_tb", proSchema);
+module.exports=proModel
